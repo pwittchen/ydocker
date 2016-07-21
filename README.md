@@ -17,10 +17,11 @@ Usage
 You can use helper shell script called `ydocker.sh` with the following parameters:
 
 ```
-  -b    building Docker container
-  -r    running SAP Hybris Commerce Suite in Docker container
-  -d    deleting Docker container
-  -h    showing help
+-b    building Docker container
+-r    running Hyris Server in Docker container
+-c    running Docker container with CLI
+-d    deleting Docker container
+-h    showing help
 ```
 
 Inside `ydocker.sh` file you can customize **version of the Commerce Suite** and **installation recipe**.
