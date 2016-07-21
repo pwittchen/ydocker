@@ -3,6 +3,14 @@ ydocker
 
 get, build, initialize and run SAP Hybris Commerce Suite inside Docker container
 
+Contents
+--------
+- [Usage](#usage)
+- [Server Endpoints](#server-endpoints)
+- [Resolving problems with Docker](#resolving-problems-with-docker)
+- [Remarks](#remarks)
+- [License](#license)
+
 Usage
 -----
 
@@ -24,9 +32,9 @@ in order to be able to download SAP Hybris Commerce Suite from Hybris repository
 
 Server Endpoints
 ----------------
-- Hybris Administration Console (HAC): https://localhost:9002/
-- Backoffice: https://localhost:9002/backoffice
-- B2C accelerator: https://localhost:9002/yacceleratorstorefront/en/?site=apparel-uk&clear=true
+- Hybris Administration Console (HAC): `https://localhost:9002/`
+- Backoffice: `https://localhost:9002/backoffice`
+- B2C accelerator: `https://localhost:9002/yacceleratorstorefront/en/?site=apparel-uk&clear=true`
 
 Resolving problems with Docker
 ------------------------------
@@ -47,3 +55,20 @@ It just downloads them, if you provide valid credentials to the shell script.
 You should have such credentials if you're company employee or partner.
 Moreover, **it's not official company's repository**.
 It's just proof of concept and may be not fully functional and stable.
+
+License
+-------
+
+    Copyright 2016 Piotr Wittchen
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
