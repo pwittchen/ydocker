@@ -11,6 +11,7 @@ Contents
 - [Server endpoints](#server-endpoints)
 - [Resolving problems with Docker](#resolving-problems-with-docker)
 - [Remarks](#remarks)
+- [References](#references)
 - [License](#license)
 
 Usage
@@ -61,6 +62,11 @@ It just downloads them, if you provide valid credentials to the shell script.
 You should have such credentials if you're company employee or partner.
 Moreover, **it's not official company's repository**.
 It's just proof of concept and may be not fully functional and stable.
+
+References
+----------
+- https://github.com/pwittchen/learning-docker
+- https://github.com/wsargent/docker-cheat-sheet
 
 License
 -------
