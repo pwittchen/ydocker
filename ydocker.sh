@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+# initial settings
 DOCKER_IMAGE_NAME=sap-hybris-commerce-suite
+COMMERCE_SUITE_VERSION=6.1.0.0.12816
+RECIPE=b2c_acc
 HOST_PORT=9002
 CONTAINER_PORT=9002
 
@@ -28,8 +31,8 @@ function buildDockerImage() {
 
   sudo docker build --build-arg SAP_USERNAME="$username" \
   --build-arg SAP_PASSWORD="$password" \
-  --build-arg COMMERCE_SUITE_VERSION=6.1.0.0.12816 \
-  --build-arg RECIPE=b2c_acc \
+  --build-arg COMMERCE_SUITE_VERSION="$COMMERCE_SUITE_VERSION" \
+  --build-arg RECIPE="$RECIPE" \
   -t "$DOCKER_IMAGE_NAME" .
 }
 
