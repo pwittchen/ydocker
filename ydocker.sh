@@ -16,7 +16,7 @@ function showHelp() {
 
         Usage:
           -b    building Docker container
-          -r    running Hyris Server in Docker container
+          -r    running Hybris Server in Docker container
           -c    running Docker container with CLI
           -d    deleting Docker container
           -h    showing help
