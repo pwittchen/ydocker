@@ -37,6 +37,7 @@ RUN cd $yHYBRIS_DIR/hybris/bin/platform
 RUN ant -f $yHYBRIS_DIR/hybris/bin/platform/build.xml clean all
 RUN ant -f $yHYBRIS_DIR/hybris/bin/platform/build.xml initialize
 
+# expose server port
 EXPOSE 9002
 
 # start the hybris platform
