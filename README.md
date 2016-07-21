@@ -6,7 +6,7 @@ get, build, initialize and run SAP Hybris Commerce Suite inside Docker container
 Contents
 --------
 - [Usage](#usage)
-- [Server Endpoints](#server-endpoints)
+- [Server endpoints](#server-endpoints)
 - [Resolving problems with Docker](#resolving-problems-with-docker)
 - [Remarks](#remarks)
 - [License](#license)
@@ -31,7 +31,7 @@ Default version is `6.1.0.0.12816` and default recipe is `b2c_acc`.
 Please remember that you need to have your own SAP e-mail and password
 in order to be able to download SAP Hybris Commerce Suite from Hybris repository inside Docker container.
 
-Server Endpoints
+Server endpoints
 ----------------
 - Hybris Administration Console (HAC): `https://localhost:9002/`
 - Backoffice: `https://localhost:9002/backoffice`
