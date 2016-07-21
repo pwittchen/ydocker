@@ -24,9 +24,12 @@ You can use helper shell script called `ydocker.sh` with the following parameter
 -h    showing help
 ```
 
-Inside `ydocker.sh` file you can customize **version of the Commerce Suite** and **installation recipe**.
-
-Default version is `6.1.0.0.12816` and default recipe is `b2c_acc`.
+Inside `ydocker.conf` file you can view or customize the following parameters:
+- Docker image name
+- Commerce Suite version
+- Recipe
+- Host port
+- Container port
 
 Please remember that you need to have your own SAP e-mail and password
 in order to be able to download SAP Hybris Commerce Suite from Hybris repository inside Docker container.

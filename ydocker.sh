@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-# initial settings
-DOCKER_IMAGE_NAME=sap-hybris-commerce-suite
-COMMERCE_SUITE_VERSION=6.1.0.0.12816
-RECIPE=b2c_acc
-HOST_PORT=9002
-CONTAINER_PORT=9002
+# loading settings
+source ydocker.conf
 
 function showHelp() {
   echo "
