@@ -1,0 +1,49 @@
+ydocker
+=======
+
+get, build, initialize and run SAP Hybris Commerce Suite inside Docker container
+
+Usage
+-----
+
+You can use helper shell script called `ydocker.sh` with the following parameters:
+
+```
+  -b    building Docker container
+  -r    running SAP Hybris Commerce Suite in Docker container
+  -d    deleting Docker container
+  -h    showing help
+```
+
+Inside `ydocker.sh` file you can customize **version of the Commerce Suite** and **installation recipe**.
+
+Default version is `6.1.0.0.12816` and default recipe is `b2c_acc`.
+
+Please remember that you need to have your own SAP e-mail and password
+in order to be able to download SAP Hybris Commerce Suite from Hybris repository inside Docker container.
+
+Server Endpoints
+----------------
+- Hybris Administration Console (HAC): https://localhost:9002/
+- Backoffice: https://localhost:9002/backoffice
+- B2C accelerator: https://localhost:9002/yacceleratorstorefront/en/?site=apparel-uk&clear=true
+
+Resolving problems with Docker
+------------------------------
+
+When you get the following message: `cannot connect to docker daemon`:
+- Make sure that Docker daemon is running by typing: `sudo service docker status`
+- If Docker daemon is stopped, type: `sudo service docker start`
+- Type `sudo` before **every** Docker command (works on Ubuntu Linux)
+
+When you get the following message: `port is already allocated`:
+- Restart Docker daemon by typing: `sudo service docker restart` and run container again
+
+Remarks
+-------
+
+This repository does not contain any source code or libraries of SAP Hybris Commerce Suite.
+It just downloads them, if you provide valid credentials to the shell script.
+You should have such credentials if you're company employee or partner.
+Moreover, **it's not official company's repository**.
+It's just proof of concept and may be not fully functional and stable.
