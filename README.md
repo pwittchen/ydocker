@@ -3,6 +3,8 @@ ydocker
 
 get, build, initialize and run SAP Hybris Commerce Suite inside Docker container
 
+![SAP Hybris logo](sap_hybris_logo.jpg)
+
 Contents
 --------
 - [Usage](#usage)
