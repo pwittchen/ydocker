@@ -65,7 +65,7 @@ Remarks
 This repository does not contain any source code or libraries of SAP Hybris Commerce Suite.
 It just downloads them, if you provide valid credentials to the shell script.
 You should have such credentials if you're company employee or partner.
-You'll need a lot of space on disk (probably about 12 GB, but I think 20GB is safe number), because Commerce Suite is huge project.
+You'll need a lot of space on disk (probably about 12 GB, but I think 15 GB is safe number), because Commerce Suite is huge project. Size of built container is 6.8 GB.
 Moreover, **it's not official company's repository**.
 It's just proof of concept and may be not fully functional and stable.
 
