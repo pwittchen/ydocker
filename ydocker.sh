@@ -25,23 +25,51 @@ function buildDockerImage() {
   echo -n "SAP password: "
   read -s password
 
-  sudo docker build --build-arg SAP_USERNAME="$username" \
-  --build-arg SAP_PASSWORD="$password" \
-  --build-arg COMMERCE_SUITE_VERSION="$COMMERCE_SUITE_VERSION" \
-  --build-arg RECIPE="$RECIPE" \
-  -t "$DOCKER_IMAGE_NAME" .
+  if [ `uname` = "Linux" ]; then
+    sudo docker build --build-arg SAP_USERNAME="$username" \
+    --build-arg SAP_PASSWORD="$password" \
+    --build-arg COMMERCE_SUITE_VERSION="$COMMERCE_SUITE_VERSION" \
+    --build-arg RECIPE="$RECIPE" \
+    -t "$DOCKER_IMAGE_NAME" .
+  fi
+  
+  if [ `uname` = "Darwin" ]; then
+    docker build --build-arg SAP_USERNAME="$username" \
+    --build-arg SAP_PASSWORD="$password" \
+    --build-arg COMMERCE_SUITE_VERSION="$COMMERCE_SUITE_VERSION" \
+    --build-arg RECIPE="$RECIPE" \
+    -t "$DOCKER_IMAGE_NAME" .  
+  fi
 }
 
 function runDockerImageServer() {
-  sudo docker run -p 127.0.0.1:"$HOST_PORT":"$CONTAINER_PORT" -t "$DOCKER_IMAGE_NAME"
+  if [ `uname` = "Linux" ]; then
+    sudo docker run -p 127.0.0.1:"$HOST_PORT":"$CONTAINER_PORT" -t "$DOCKER_IMAGE_NAME"
+  fi
+  
+  if [ `uname` = "Darwin" ]; then
+    docker run -p 127.0.0.1:"$HOST_PORT":"$CONTAINER_PORT" -t "$DOCKER_IMAGE_NAME"
+  fi
 }
 
 function runDockerImageCli() {
-  sudo docker run -i -t "$DOCKER_IMAGE_NAME" /bin/bash
+  if [ `uname` = "Linux" ]; then
+    sudo docker run -i -t "$DOCKER_IMAGE_NAME" /bin/bash
+  fi
+  
+  if [ `uname` = "Darwin" ]; then
+    docker run -i -t "$DOCKER_IMAGE_NAME" /bin/bash
+  fi
 }
 
 function deleteDockerImage() {
-  sudo docker rmi -f "$DOCKER_IMAGE_NAME"
+  if [ `uname` = "Linux" ]; then
+    sudo docker rmi -f "$DOCKER_IMAGE_NAME"
+  fi
+  
+  if [ `uname` = "Darwin" ]; then
+    docker rmi -f "$DOCKER_IMAGE_NAME"
+  fi
 }
 
 OPTIND=1 # Reset in case getopts has been used previously in the shell.
