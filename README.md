@@ -11,6 +11,7 @@ Contents
 - [Server endpoints](#server-endpoints)
 - [Resolving problems with Docker](#resolving-problems-with-docker)
 - [Remarks](#remarks)
+- [Have you tested it?](#have-you-tested-it)
 - [References](#references)
 - [License](#license)
 
@@ -54,6 +55,9 @@ When you get the following message: `cannot connect to docker daemon`:
 When you get the following message: `port is already allocated`:
 - Restart Docker daemon by typing: `sudo service docker restart` and run container again
 
+When you have problems with Docker on Mac OS X:
+- [Install Docker Toolbox](https://getcarina.com/docs/tutorials/docker-install-mac/) and open it in **default** system terminal
+
 Remarks
 -------
 
@@ -62,6 +66,11 @@ It just downloads them, if you provide valid credentials to the shell script.
 You should have such credentials if you're company employee or partner.
 Moreover, **it's not official company's repository**.
 It's just proof of concept and may be not fully functional and stable.
+
+Have you tested it?
+-------------------
+
+Currently it was tested on Ubuntu Linux 14.04 LTS.
 
 References
 ----------
