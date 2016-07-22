@@ -57,6 +57,7 @@ When you get the following message: `port is already allocated`:
 
 When you have problems with Docker on Mac OS X:
 - [Install Docker Toolbox](https://getcarina.com/docs/tutorials/docker-install-mac/) and open Docker Quickstart Terminal with **default** system terminal
+- On Mac OS X in Docker Quickstart Terminal docker commands **should not have sudo keywords** in the befinning.
 
 Remarks
 -------
