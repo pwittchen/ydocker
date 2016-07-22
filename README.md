@@ -11,7 +11,7 @@ Contents
 - [Server endpoints](#server-endpoints)
 - [Resolving problems with Docker](#resolving-problems-with-docker)
 - [Remarks](#remarks)
-- [Have you tested it?](#have-you-tested-it)
+- [Testing](#testing)
 - [References](#references)
 - [License](#license)
 
@@ -68,8 +68,8 @@ You should have such credentials if you're company employee or partner.
 Moreover, **it's not official company's repository**.
 It's just proof of concept and may be not fully functional and stable.
 
-Have you tested it?
--------------------
+Testing
+-------
 
 Currently it was tested on Ubuntu Linux 14.04 LTS and works fine.
 
