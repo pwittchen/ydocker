@@ -53,7 +53,7 @@ When you get the following message: `cannot connect to docker daemon`:
 - Type `sudo` before **every** Docker command (works on Ubuntu Linux)
 
 When you get the following message: `port is already allocated`:
-- Restart Docker daemon by typing: `sudo service docker restart` and run container again
+- Restart Docker daemon by typing: `sudo service docker restart` and run container again (works on Ubuntu Linux)
 
 When you have problems with Docker on Mac OS X:
 - [Install Docker Toolbox](https://getcarina.com/docs/tutorials/docker-install-mac/) and open Docker Quickstart Terminal with **default** system terminal
