@@ -71,7 +71,19 @@ It's just proof of concept and may be not fully functional and stable.
 Have you tested it?
 -------------------
 
-Currently it was tested on Ubuntu Linux 14.04 LTS.
+Currently it was tested on Ubuntu Linux 14.04 LTS and works fine.
+
+I had problems with building container on Mac OS X with Docker Toolbox. It stucked during initialization at:
+
+```
+[java] INFO  [main] [MccManager] importing resource /impex/mcc_links_id.impex
+ [java] INFO  [main] (0000002N-ImpEx-Import) [ImpExImportJob] Starting ImpEx cronjob "ImpEx-Import"
+ [java] INFO  [main] (0000002N-ImpEx-Import) [Importer] Finished 1 pass in 0d 00h:00m:00s:235ms - processed: 20, no lines dumped (last pass 0)
+ [java] INFO  [main] [Initialization] Localizing types ...
+ [java] INFO  [main] [TypeLocalization] 1 thread will be used to localize type system.
+```
+
+and couldn't go further.
 
 References
 ----------
