@@ -18,7 +18,7 @@ RUN apt-get install oracle-java8-installer -y
 RUN apt-get install oracle-java8-set-default
 
 # install tools
-RUN apt-get install -y wget sed ant maven gradle
+RUN apt-get install -y wget ant maven gradle
 
 # download and extract hybris commerce suite
 RUN mkdir -p /home/sap-hybris-cs
