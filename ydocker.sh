@@ -14,6 +14,7 @@ function showHelp() {
           -b    building Docker container
           -r    running Hybris Server in Docker container
           -c    running Docker container with CLI
+          -i    showing info about Docker container
           -d    deleting Docker container
           -h    showing help
         "
@@ -40,13 +41,17 @@ function runDockerImageCli() {
   sudo docker run -i -t "$DOCKER_IMAGE_NAME" /bin/bash
 }
 
+function showDockerImageInfo() {
+  sudo docker images | grep "$DOCKER_IMAGE_NAME"
+}
+
 function deleteDockerImage() {
   sudo docker rmi -f "$DOCKER_IMAGE_NAME"
 }
 
 OPTIND=1 # Reset in case getopts has been used previously in the shell.
 
-while getopts "hbrcd" opt; do
+while getopts "hbrcid" opt; do
     case "$opt" in
     h)
         showHelp
@@ -57,6 +62,8 @@ while getopts "hbrcd" opt; do
     r)  runDockerImageServer
         ;;
     c)  runDockerImageCli
+        ;;
+    i)  showDockerImageInfo
         ;;
     d)  deleteDockerImage
         ;;

@@ -24,6 +24,7 @@ You can use helper shell script called `ydocker.sh` with the following parameter
 -b    building Docker container
 -r    running Hybris Server in Docker container
 -c    running Docker container with CLI
+-i    showing info about Docker container
 -d    deleting Docker container
 -h    showing help
 ```
