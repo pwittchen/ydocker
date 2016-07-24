@@ -59,6 +59,8 @@ When you get the following message: `port is already allocated`:
 When you have problems with Docker on Mac OS X:
 - [Install Docker Toolbox](https://getcarina.com/docs/tutorials/docker-install-mac/) and open Docker Quickstart Terminal with **default** system terminal
 - On Mac OS X in Docker Quickstart Terminal docker commands **should not have sudo keywords** in the beginning. That's why `ydocker.sh` shell script contains a lot of "if" statements for Linux and OS X, which is subject of improvement in the future.
+- Check if size of the VM is big enough
+- Optionally, you can create VM with Ubuntu via VirtualBox and build container there. Remember about proper disk size.
 
 Remarks
 -------
