@@ -15,6 +15,8 @@ Contents
 - [Remarks](#remarks)
 - [Testing](#testing)
 - [References](#references)
+  - [General links](#general-links)
+  - [Similar projects](#similar-projects)
 - [License](#license)
 
 Usage
@@ -93,9 +95,19 @@ and couldn't go further.
 
 References
 ----------
+
+### General links
 - https://github.com/pwittchen/learning-docker
 - https://github.com/wsargent/docker-cheat-sheet
 - http://blog.wittchen.biz.pl/dockerizing-hybris/
+
+### Similar projects
+- https://github.com/stefanleh/hybris-base-image
+- https://github.com/stefanleh/hybris-mysql
+- https://github.com/stefanleh/hybris-datahub-mysql
+- https://github.com/debianmaster/docker-hybris
+- https://github.com/prelegalwonder/hybris-docker
+- https://github.com/mlong168/hybris-docker
 
 License
 -------
