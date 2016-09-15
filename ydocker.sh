@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-set -e
 
-# loading settings
-source ydocker.conf
+set -e # automatically exit script on error
+
+source ydocker.conf # loading settings
 
 function showHelp() {
   echo "
