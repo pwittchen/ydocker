@@ -26,9 +26,23 @@ function buildDockerImage() {
   echo -n "SAP password: "
   read -s password
 
+  if [ "$COMMERCE_SUITE_VERSION" == "latest" ]
+  then
+    COMMERCE_SUITE_VERSION="" # when we leave this variable empty, we'll get the latest suite
+  fi
+
+  # get first endpoint for downloading Commerce Suite through Artifactory REST API
+  COMMERCE_SUITE_DOWNLOAD_URL_PREPARATION=`curl -u $username:$password \
+  https://repository.hybris.com/api/search/artifact\?name\=commerce-suite-$COMMERCE_SUITE_VERSION\&repos\=hybris-$ARTIFACT_TYPE \
+  | python -mjson.tool | grep zip | tail -1 | awk '{print $2}' | sed -e 's/^"//' -e 's/"$//'`
+
+  # get exact url of Commerce Suite from previously extracted endpoint
+  COMMERCE_SUITE_DOWNLOAD_URL=`curl -u $username:$password $COMMERCE_SUITE_DOWNLOAD_URL_PREPARATION \
+  | python -mjson.tool | grep downloadUri | tail -1 | awk '{print $2}' | sed -e 's/^"//' -e 's/"$//' | rev | cut -c 3- | rev`
+
   sudo docker build --build-arg SAP_USERNAME="$username" \
   --build-arg SAP_PASSWORD="$password" \
-  --build-arg COMMERCE_SUITE_VERSION="$COMMERCE_SUITE_VERSION" \
+  --build-arg COMMERCE_SUITE_DOWNLOAD_URL="$COMMERCE_SUITE_DOWNLOAD_URL" \
   --build-arg RECIPE="$RECIPE" \
   -t "$DOCKER_IMAGE_NAME" .
 }
