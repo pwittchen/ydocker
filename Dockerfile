@@ -5,7 +5,7 @@ USER root
 # input arguments required to access artifactory
 ARG SAP_USERNAME
 ARG SAP_PASSWORD
-ARG COMMERCE_SUITE_VERSION
+ARG COMMERCE_SUITE_DOWNLOAD_URL
 ARG RECIPE
 
 # install java
@@ -16,18 +16,19 @@ RUN apt-get update
 RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
 RUN apt-get install oracle-java8-installer -y
 RUN apt-get install oracle-java8-set-default
+ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # install tools
 RUN apt-get install -y wget ant maven gradle
 
-# download and extract hybris commerce suite
-RUN mkdir -p /home/sap-hybris-cs
-RUN wget --http-user=${SAP_USERNAME} --http-password=${SAP_PASSWORD} https://repository.hybris.com/hybris-release/de/hybris/platform/suite/commerce-suite/${COMMERCE_SUITE_VERSION}/commerce-suite-${COMMERCE_SUITE_VERSION}.zip
-RUN unzip *.zip -d /home/sap-hybris-cs/
-RUN rm *.zip
-
 # set variable for hybris directory
-ENV yHYBRIS_DIR="/home/sap-hybris-cs"
+ENV yHYBRIS_DIR="/home/sap-hybris-commerce-suite"
+
+# download and extract hybris commerce suite
+RUN mkdir -p $yHYBRIS_DIR
+RUN wget --http-user=${SAP_USERNAME} --http-password=${SAP_PASSWORD} ${COMMERCE_SUITE_DOWNLOAD_URL}
+RUN unzip *.zip -d $yHYBRIS_DIR
+RUN rm *.zip
 
 # install hybris recipe
 RUN $yHYBRIS_DIR/installer/install.sh -r ${RECIPE}

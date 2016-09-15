@@ -35,7 +35,8 @@ You can use helper shell script called `ydocker.sh` with the following parameter
 
 Inside `ydocker.conf` file you can view or customize the following parameters:
 - Docker image name
-- Commerce Suite version
+- Commerce Suite version (set `latest` to keep your software fresh)
+- Artifact type (`snapshot` or `release`)
 - Recipe
 - Host port
 - Container port
