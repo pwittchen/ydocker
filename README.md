@@ -44,6 +44,13 @@ Inside `ydocker.conf` file you can view or customize the following parameters:
 Please remember that you need to have your own SAP e-mail and password
 in order to be able to download SAP Hybris Commerce Suite from Hybris repository inside Docker container.
 
+To get information about build and version of the platform inside created container, use the following commands:
+
+```
+./ydocker -c
+cat /home/sap-hybris-commerce-suite/hybris/bin/platform/build.number
+```
+
 Server endpoints
 ----------------
 - Hybris Administration Console (HAC): `https://localhost:9002/`
