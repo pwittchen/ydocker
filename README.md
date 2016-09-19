@@ -28,7 +28,7 @@ Usage
 
 If you haven't installed Docker yet, go to the section about [installing Docker](#installing-docker) first.
 
-You can use helper shell script called `ydocker.sh` with the following parameters:
+You can use helper shell script called `ydocker` with the following parameters:
 
 ```
 -b    building Docker container

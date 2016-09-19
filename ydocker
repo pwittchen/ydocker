@@ -6,7 +6,7 @@ source ydocker.conf # loading settings
 
 function showHelp() {
   echo "
-        ydocker.sh is a shell script responsible
+        ydocker is a script responsible
         for building and running SAP Hybris Commerce Suite
         in Docker container
 
