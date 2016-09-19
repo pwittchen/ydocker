@@ -33,6 +33,7 @@ You can use helper shell script called `ydocker` with the following parameters:
 -r    running Hybris Server in Docker container
 -c    running Docker container with CLI
 -i    showing info about Docker container
+-u    showing Commerce Suite Download Url
 -d    deleting Docker container
 -h    showing help
 ```

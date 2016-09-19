@@ -15,21 +15,22 @@ function showHelp() {
           -r    running Hybris Server in Docker container
           -c    running Docker container with CLI
           -i    showing info about Docker container
+          -u    showing Commerce Suite Download Url
           -d    deleting Docker container
           -h    showing help
         "
 }
 
-function buildDockerImage() {
-  echo -n "SAP username (e-mail): "
-  read username
-  echo -n "SAP password: "
-  read -s password
-
+function setCommerceSuiteDownloadUrl {
   if [ "$COMMERCE_SUITE_VERSION" == "latest" ]
   then
     COMMERCE_SUITE_VERSION="" # when we leave this variable empty, we'll get the latest suite
   fi
+
+  echo -n "SAP username (e-mail): "
+  read username
+  echo -n "SAP password: "
+  read -s password
 
   # get first endpoint for downloading Commerce Suite through Artifactory REST API
   COMMERCE_SUITE_DOWNLOAD_URL_PREPARATION=`curl -u $username:$password \
@@ -39,6 +40,15 @@ function buildDockerImage() {
   # get exact url of Commerce Suite from previously extracted endpoint
   COMMERCE_SUITE_DOWNLOAD_URL=`curl -u $username:$password $COMMERCE_SUITE_DOWNLOAD_URL_PREPARATION \
   | python -mjson.tool | grep downloadUri | tail -1 | awk '{print $2}' | sed -e 's/^"//' -e 's/"$//' | rev | cut -c 3- | rev`
+}
+
+function showCommerceSuiteDownloadUrl() {
+  setCommerceSuiteDownloadUrl
+  echo $COMMERCE_SUITE_DOWNLOAD_URL
+}
+
+function buildDockerImage() {
+  setCommerceSuiteDownloadUrl
 
   sudo docker build --build-arg SAP_USERNAME="$username" \
   --build-arg SAP_PASSWORD="$password" \
@@ -65,7 +75,7 @@ function deleteDockerImage() {
 
 OPTIND=1 # Reset in case getopts has been used previously in the shell.
 
-while getopts "hbrcid" opt; do
+while getopts "hbrciud" opt; do
     case "$opt" in
     h)
         showHelp
@@ -78,6 +88,8 @@ while getopts "hbrcid" opt; do
     c)  runDockerImageCli
         ;;
     i)  showDockerImageInfo
+        ;;
+    u)  showCommerceSuiteDownloadUrl
         ;;
     d)  deleteDockerImage
         ;;
