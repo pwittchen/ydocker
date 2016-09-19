@@ -26,6 +26,8 @@ Contents
 Usage
 -----
 
+If you haven't installed Docker yet, go to the section about [installing Docker](#installing-docker) first.
+
 You can use helper shell script called `ydocker.sh` with the following parameters:
 
 ```
