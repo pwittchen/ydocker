@@ -109,19 +109,11 @@ It's just proof of concept and may be not fully functional and stable.
 Testing
 -------
 
-Currently it was tested on Ubuntu Linux 14.04 LTS and works fine.
+This solution was tested on the following systems:
+- Ubuntu Linux 14.04 LTS
+- OS X El Capitan 10.11.6
 
-I had problems with building container on Mac OS X with Docker Toolbox. It stucked during initialization at:
-
-```
-[java] INFO  [main] [MccManager] importing resource /impex/mcc_links_id.impex
- [java] INFO  [main] (0000002N-ImpEx-Import) [ImpExImportJob] Starting ImpEx cronjob "ImpEx-Import"
- [java] INFO  [main] (0000002N-ImpEx-Import) [Importer] Finished 1 pass in 0d 00h:00m:00s:235ms - processed: 20, no lines dumped (last pass 0)
- [java] INFO  [main] [Initialization] Localizing types ...
- [java] INFO  [main] [TypeLocalization] 1 thread will be used to localize type system.
-```
-
-and couldn't go further.
+Building container and running the application went fine. Docker was installed according to the official instructions.
 
 References
 ----------
