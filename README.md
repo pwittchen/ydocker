@@ -5,8 +5,6 @@ get, build, initialize and run [SAP Hybris Commerce Suite](https://www.hybris.co
 
 read [a blog post about dockerizing Hybris](http://blog.wittchen.biz.pl/dockerizing-hybris/)
 
-![ydocker logo](ydocker.png)
-
 Contents
 --------
 - [Usage](#usage)
