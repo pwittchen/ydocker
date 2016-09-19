@@ -74,12 +74,6 @@ When you get the following message: `cannot connect to docker daemon`:
 When you get the following message: `port is already allocated`:
 - Restart Docker daemon by typing: `sudo service docker restart` and run container again (works on Ubuntu Linux)
 
-When you have problems with Docker on Mac OS X:
-- [Install Docker Toolbox](https://getcarina.com/docs/tutorials/docker-install-mac/) and open Docker Quickstart Terminal with **default** system terminal or install [Docker for Mac ](https://docs.docker.com/docker-for-mac/) (second option is recommended)
-- On Mac OS X in Docker Quickstart Terminal docker commands **should not have sudo keywords** in the beginning. That's why `ydocker.sh` shell script contains a lot of "if" statements for Linux and OS X, which is subject of improvement in the future.
-- Check if size of the disk of VM is big enough
-- Optionally, you can create VM with Ubuntu via VirtualBox and build container there. Remember about proper disk size.
-
 Server endpoints
 ----------------
 - Hybris Administration Console (HAC): `https://localhost:9002/`
