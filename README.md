@@ -10,8 +10,12 @@ read [a blog post about dockerizing Hybris](http://blog.wittchen.biz.pl/dockeriz
 Contents
 --------
 - [Usage](#usage)
-- [Server endpoints](#server-endpoints)
+- [Installing Docker](#installing-docker)
+  - [Ubuntu](#ubuntu)
+  - [Mac OS X](#mac-os-x)
 - [Resolving problems with Docker](#resolving-problems-with-docker)
+- [Server endpoints](#server-endpoints)
+- [Platform build version](#platform-build-version)
 - [Remarks](#remarks)
 - [Testing](#testing)
 - [References](#references)
@@ -44,18 +48,18 @@ Inside `ydocker.conf` file you can view or customize the following parameters:
 Please remember that you need to have your own SAP e-mail and password
 in order to be able to download SAP Hybris Commerce Suite from Hybris repository inside Docker container.
 
-To get information about build and version of the platform inside created container, use the following commands:
+Installing Docker
+-----------------
 
-```
-./ydocker -c
-cat /home/sap-hybris-commerce-suite/hybris/bin/platform/build.number
-```
+If you haven't installed Docker yet, follow instructions below.
 
-Server endpoints
-----------------
-- Hybris Administration Console (HAC): `https://localhost:9002/`
-- Backoffice: `https://localhost:9002/backoffice`
-- B2C accelerator: `https://localhost:9002/yacceleratorstorefront/en/?site=apparel-uk&clear=true`
+### Ubuntu
+
+If you are using Ubuntu Linux and want to install Docker, follow official instructions for [Installation on Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntulinux/) from the Docker website.
+
+### Mac OS X
+
+If you are using Mac OS X and want to install Docker, get [**Docker for Mac**](https://docs.docker.com/docker-for-mac/) from the official Docker website.
 
 Resolving problems with Docker
 ------------------------------
@@ -73,6 +77,22 @@ When you have problems with Docker on Mac OS X:
 - On Mac OS X in Docker Quickstart Terminal docker commands **should not have sudo keywords** in the beginning. That's why `ydocker.sh` shell script contains a lot of "if" statements for Linux and OS X, which is subject of improvement in the future.
 - Check if size of the disk of VM is big enough
 - Optionally, you can create VM with Ubuntu via VirtualBox and build container there. Remember about proper disk size.
+
+Server endpoints
+----------------
+- Hybris Administration Console (HAC): `https://localhost:9002/`
+- Backoffice: `https://localhost:9002/backoffice`
+- B2C accelerator: `https://localhost:9002/yacceleratorstorefront/en/?site=apparel-uk&clear=true`
+
+Platform build version
+----------------------
+
+To get information about build and version of the platform inside created container, use the following commands:
+
+```
+./ydocker -c
+cat /home/sap-hybris-commerce-suite/hybris/bin/platform/build.number
+```
 
 Remarks
 -------
