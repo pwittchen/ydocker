@@ -1,7 +1,7 @@
 ydocker
 =======
 
-get, build, initialize and run SAP Hybris Commerce Suite inside Docker container
+get, build, initialize and run [SAP Hybris Commerce Suite](https://www.hybris.com/en/commerce) inside [Docker](https://www.docker.com/) container
 
 read [a blog post about dockerizing Hybris](http://blog.wittchen.biz.pl/dockerizing-hybris/)
 
