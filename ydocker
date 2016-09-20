@@ -8,7 +8,7 @@ function showHelp() {
   echo "
         ydocker is a script responsible
         for building and running SAP Hybris Commerce Suite
-        in Docker container
+        in a Docker container
 
         Usage:
           -b    building Docker container
