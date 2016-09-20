@@ -21,16 +21,23 @@ function showHelp() {
         "
 }
 
-function setCommerceSuiteDownloadUrl {
+function setCommerceSuiteVersionIfNecessary() {
   if [ "$COMMERCE_SUITE_VERSION" == "latest" ]
   then
     COMMERCE_SUITE_VERSION="" # when we leave this variable empty, we'll get the latest suite
   fi
+}
 
+function setUsernameAndPassword() {
   echo -n "SAP username (e-mail): "
   read username
   echo -n "SAP password: "
   read -s password
+}
+
+function setCommerceSuiteDownloadUrl {
+  setCommerceSuiteVersionIfNecessary
+  setUsernameAndPassword
 
   echo $'\ngetting Commerce Suite download url from Artifactory...'
 
