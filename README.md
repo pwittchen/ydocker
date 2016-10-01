@@ -33,7 +33,7 @@ cd ydocker/
 ./ydocker -b
 ```
 
-Provide your credentials and wait for a while while container is being created. It may take about 30 minutes or more.
+Provide your credentials and wait while container is being created. It may take about 30 minutes or more.
 
 When it's done, run the server with the following command:
 
