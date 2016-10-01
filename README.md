@@ -7,6 +7,7 @@ read [a blog post about dockerizing Hybris](http://blog.wittchen.biz.pl/dockeriz
 
 Contents
 --------
+- [Quick start](#quick-start)
 - [Usage](#usage)
 - [Installing Docker](#installing-docker)
   - [Ubuntu](#ubuntu)
@@ -20,6 +21,33 @@ Contents
   - [General links](#general-links)
   - [Similar projects](#similar-projects)
 - [License](#license)
+
+Quick start
+-----------
+
+If you have already [installed Docker](installing-docker) and Git, just do the following things:
+
+```shell
+git clone https://github.com/pwittchen/ydocker.git
+cd ydocker/
+./ydocker -b
+```
+
+Provide your credentials and wait for a while while container is being created. It may take about 30 minutes or more.
+
+When it's done, run the server with the following command:
+
+```shell
+./ydocker -r
+```
+
+Wait a while, let the server to start up and then check if everything works by visitng the following URL:
+
+```
+https://localhost:9002/backoffice
+```
+
+That's it!
 
 Usage
 -----
