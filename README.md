@@ -25,7 +25,7 @@ Contents
 Quick start
 -----------
 
-If you have already [installed Docker](#installing-docker) and Git, just do the following things:
+If you have already [installed Docker](#installing-docker) and Git, just open the terminal and do the following things:
 
 ```shell
 git clone https://github.com/pwittchen/ydocker.git
