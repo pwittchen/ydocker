@@ -11,7 +11,7 @@ Contents
 - [Usage](#usage)
 - [Installing Docker](#installing-docker)
   - [Ubuntu](#ubuntu)
-  - [Mac OS X](#mac-os-x)
+  - [macOS](#macos)
 - [Resolving problems with Docker](#resolving-problems-with-docker)
 - [Server endpoints](#server-endpoints)
 - [Platform build version](#platform-build-version)
@@ -86,9 +86,9 @@ If you haven't installed Docker yet, follow instructions below.
 
 If you are using Ubuntu Linux and want to install Docker, follow official instructions for [Installation on Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntulinux/) from the Docker website.
 
-### Mac OS X
+### macOS
 
-If you are using Mac OS X and want to install Docker, get [**Docker for Mac**](https://docs.docker.com/docker-for-mac/) from the official Docker website.
+If you are using macOS and want to install Docker, get [**Docker for Mac**](https://docs.docker.com/docker-for-mac/) from the official Docker website.
 
 Resolving problems with Docker
 ------------------------------
