@@ -145,6 +145,7 @@ References
 - https://github.com/pwittchen/learning-docker
 - https://github.com/wsargent/docker-cheat-sheet
 - http://blog.wittchen.biz.pl/dockerizing-hybris/
+- https://github.com/pwittchen/ydownloader
 
 ### Similar projects
 - https://github.com/stefanleh/hybris-base-image
