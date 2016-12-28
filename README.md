@@ -3,6 +3,8 @@ ydocker
 
 get, build, initialize and run [SAP Hybris Commerce Suite](https://www.hybris.com/en/commerce) inside [Docker](https://www.docker.com/) container
 
+**It's unofficial PoC!**
+
 Read [a blog post about dockerizing Hybris](http://blog.wittchen.biz.pl/dockerizing-hybris/).
 
 **Please note**: Since version 6.3 Hybris has built-in recipes with Docker support and it's recommended solution. This repository contains only unofficial Proof of Concept with development setup.
