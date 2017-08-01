@@ -2,7 +2,7 @@
 
 set -e # automatically exit script on error
 
-source .ydocker # load configuration
+source .ydocker.conf # load configuration
 
 function showHelp() {
   echo "

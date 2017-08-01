@@ -70,7 +70,7 @@ You can use helper shell script called `ydocker` with the following parameters:
 -h    showing help
 ```
 
-Inside `.ydocker` file you can view or customize the following parameters:
+Inside `.ydocker.conf` file you can view or customize the following parameters:
 - Docker image name
 - Commerce Suite version (set `latest` to keep your software fresh - you can also set specific version like `6.2`)
 - Artifact type (`snapshot` or `release`)
