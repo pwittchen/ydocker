@@ -3,7 +3,7 @@ ydocker
 
 get, build, initialize and run [SAP Hybris Commerce Suite](https://www.hybris.com/en/commerce) inside [Docker](https://www.docker.com/) container
 
-**It's unofficial PoC!**
+**It's unofficial PoC for experimental purposes! It's not supported by SAP Hybris! Do NOT use it in production!**
 
 Read [a blog post about dockerizing Hybris](http://blog.wittchen.biz.pl/dockerizing-hybris/).
 
