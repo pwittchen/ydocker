@@ -156,6 +156,7 @@ References
 - https://github.com/debianmaster/docker-hybris
 - https://github.com/prelegalwonder/hybris-docker
 - https://github.com/mlong168/hybris-docker
+- https://github.com/mcastellin/docker-hybris
 
 License
 -------
