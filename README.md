@@ -5,7 +5,7 @@ get, build, initialize and run [SAP Hybris Commerce Suite](https://www.hybris.co
 
 **It's unofficial PoC for experimental purposes! It's not supported by SAP Hybris! Do NOT use it in production!**
 
-Read [a blog post about dockerizing Hybris](http://blog.wittchen.biz.pl/dockerizing-hybris/).
+Read [a blog post about dockerizing Hybris](http://wittchen.io/2016/07/27/dockerizing-hybris/).
 
 **Please note**: Since version 6.3 Hybris has built-in recipes with Docker support and it's recommended solution. This repository contains only unofficial Proof of Concept with development setup.
 
