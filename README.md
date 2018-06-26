@@ -146,7 +146,7 @@ References
 ### General links
 - https://github.com/pwittchen/learning-docker
 - https://github.com/wsargent/docker-cheat-sheet
-- http://blog.wittchen.biz.pl/dockerizing-hybris/
+- http://wittchen.io/2016/07/27/dockerizing-hybris/
 - https://github.com/pwittchen/ydownloader
 
 ### Similar projects
