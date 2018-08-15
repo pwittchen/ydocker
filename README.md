@@ -72,7 +72,7 @@ You can use helper shell script called `ydocker` with the following parameters:
 
 Inside `.ydocker.conf` file you can view or customize the following parameters:
 - Docker image name
-- Commerce Suite version (set `latest` to keep your software fresh - you can also set specific version like `6.2`)
+- Commerce Suite version (set `latest` to keep your software fresh - you can also set specific version like `6.2`; in the latest releases versioning style was changed, so `latest` may not refer to the latest version - it's recommended to specify the concrete version - e.g. `18.08`)
 - Artifact type (`snapshot` or `release`)
 - Recipe
 - Host port
